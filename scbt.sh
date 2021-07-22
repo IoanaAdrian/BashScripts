@@ -2,7 +2,6 @@
 
 #ScreenBrightnessTemperature
 
-
 function help(){
         RED='\e[41m'
         echo -e "${RED}###### THIS IS HELP MODE ######"
@@ -34,14 +33,14 @@ then
     fi
     if [ $1 = "-d" ]
     then
-        sct 6500
         xrandr --output HDMI-0 --brightness 1
         xrandr --output HDMI-1 --brightness 1
+        sct 6500
     else if [ $1 = "-n" ]
         then 
-            sct 4500
             xrandr --output HDMI-0 --brightness 0.8
             xrandr --output HDMI-1 --brightness 0.8
+            sct 4500
         fi
     fi
 fi
